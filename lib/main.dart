@@ -78,10 +78,9 @@ class _HomeBodyState extends State<HomeBody> {
   GlobalKey _categoriesKey = GlobalKey();
   GlobalKey _nameKey = GlobalKey();
 
-  //Shared Preferences
-
   @override
   Widget build(BuildContext context) {
+
     SharedPreferences preferences;
 
     displayShowcase() async {
@@ -354,6 +353,8 @@ class CustomAppBar extends StatelessWidget {
       child: Showcase(
         key: KeysToBeInherited.of(context).cartIndicatorKey,
         description: "Click here to review the items in your cart",
+        showcaseBackgroundColor: Colors.yellow[100],
+        descTextStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.yellowAccent[900]),
         child: Container(
           margin: EdgeInsets.only(right: 30),
           child: Text(length.toString()),
